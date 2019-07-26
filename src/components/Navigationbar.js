@@ -16,7 +16,7 @@ const Styles = styled.div`
 
 }`
 
-export const Navigationbar = (props) => (
+export const Navigationbar = () => (
     <Styles>
       <Navbar expand="lg">
           <Navbar.Brand href="/">Collabeteria</Navbar.Brand>

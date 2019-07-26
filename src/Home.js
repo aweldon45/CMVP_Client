@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Media } from 'react-bootstrap';
 import lpImage from './assets/backlit-clouds-friends.jpg'
 import styled from 'styled-components';
+import { ButtonOne } from './components/button'
 
 const Styles = styled.div`
 
@@ -16,9 +17,32 @@ const Styles = styled.div`
 }
 
 #mediaImg {
+  width: 60%;
+  height: auto;
   border: 5px solid white;
   border-radius: 12px;
   box-shadow: 20px 20px 20px #FF72BD
+}
+
+#tagFalse {
+  text-decoration: line-through;
+}
+
+#tagTrue {
+  color: #FF72BD;
+}
+
+#wrapper {
+  display: flex;
+  padding-top: 8px;
+}
+
+#btnLeft {
+  flex: 0 0 45%;
+}
+
+#btnRight {
+  flex: 1;
 }
 
 `
@@ -30,13 +54,23 @@ class Home extends Component {
         <Container fluid={true} id='landingPage'>
           <Media id='media'>
             <Media.Body>
+            <div>
               <h1>Collabeteria.</h1>
-              <p>A video-first networking tool for filmmakers</p>
+              <p id='tagFalse'>Bacterial infection</p>
+              <p id='tagFalse'>Planet in a fictional universe</p>
+              <p id='tagTrue'>A video-first networking tool for filmmakers</p>
+            </div>
+            <section id='wrapper'>
+            <div id='btnLeft'>
+              <ButtonOne>Add Project</ButtonOne>
+            </div>
+            <div id='btnRight'>
+              <ButtonOne>Join Project</ButtonOne>
+            </div>
+            </section>
             </Media.Body>
             <img
-            width={575}
-            height={425}
-            classname="ml-3"
+            className="ml-3"
             src={lpImage}
             id='mediaImg'
             alt="backlit-clouds-friends"
