@@ -13,15 +13,15 @@ class App extends Component {
     return (
       <React.Fragment>
       <Navigationbar/>
-      <Layout>
         <Router>
           <Switch>
-            <Route exact path="/" component = {Home} />
-            <Route path="/Login" component = {Login} />
-            <Route path="/Search" component = {Search} />
+              <Route exact path="/" component = {Home} />
+            <Layout>
+              <Route path="/Login" component = {Login} />
+              <Route path="/Search" component = {Search} />
+            </Layout>
           </Switch>
         </Router>
-      </Layout>
       </React.Fragment>
     )};
 }
