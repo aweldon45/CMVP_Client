@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './Home';
-import Login from './Login';
+import AddProject from './AddProject';
 import Search from './Search';
 import { Layout }  from './components/Layout';
 import { Navigationbar } from './components/Navigationbar'
@@ -17,7 +17,7 @@ class App extends Component {
           <Switch>
               <Route exact path="/" component = {Home} />
             <Layout>
-              <Route path="/Login" component = {Login} />
+              <Route path="/AddProject" component = {AddProject} />
               <Route path="/Search" component = {Search} />
             </Layout>
           </Switch>

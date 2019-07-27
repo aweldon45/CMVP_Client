@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, Media } from 'react-bootstrap';
 import lpImage from './assets/backlit-clouds-friends.jpg'
 import styled from 'styled-components';
-import { ButtonOne } from './components/button'
+import { ButtonOne } from './components/Button'
 
 const Styles = styled.div`
 
