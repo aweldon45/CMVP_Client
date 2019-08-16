@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { NameForm, LinkForm, UsernameForm, RoleForm, LocationForm } from './components/Forms'
-import { ButtonOne } from './components/Button'
+import { NameForm, LinkForm, UsernameForm, RoleForm, LocationForm } from '../components/Forms'
+import { ButtonOne } from '../components/Button'
 
 class AddProject extends Component {
   render() {

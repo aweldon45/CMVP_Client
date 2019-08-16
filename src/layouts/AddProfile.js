@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { EmailForm, PasswordForm, CnfPasswordForm, ProfileImageForm } from './components/Forms'
-import { ButtonOne } from './components/Button'
+import { EmailForm, PasswordForm, CnfPasswordForm, ProfileImageForm } from '../components/Forms'
+import { ButtonOne } from '../components/Button'
 
 class AddProfile extends Component {
   render() {

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Home from './Home';
-import AddProject from './AddProject';
-import Search from './Search';
-import ProjectDetails from './ProjectDetails';
-import AddProfile from './AddProfile'
+import Home from './layouts/Home';
+import AddProject from './layouts/AddProject';
+import Search from './layouts/Search';
+import ProjectDetails from './layouts/ProjectDetails';
+import AddProfile from './layouts/AddProfile'
 import { Layout }  from './components/Layout';
 import { Navigationbar } from './components/Navigationbar'
 

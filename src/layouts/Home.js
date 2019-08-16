@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { Container, Media } from 'react-bootstrap';
-import lpImage from './assets/backlit-clouds-friends.jpg'
+import lpImage from '../assets/backlit-clouds-friends.jpg';
 import styled from 'styled-components';
-import { ButtonOne } from './components/Button'
+import { ButtonOne } from '../components/Button';
+import { BrowserRouter as Route, Link } from 'react-router-dom';
+//import AddProject from './AddProject';
 
+// layout style
 const Styles = styled.div`
 
 #landingPage {
@@ -47,6 +50,10 @@ const Styles = styled.div`
 
 `
 
+//component functions
+
+
+//component build
 class Home extends Component {
   render() {
     return (
@@ -62,10 +69,14 @@ class Home extends Component {
             </div>
             <section id='wrapper'>
             <div id='btnLeft'>
+              <Link to ='/AddProject'>
               <ButtonOne>Add Project</ButtonOne>
+              </Link>
             </div>
             <div id='btnRight'>
+              <Link to ='/AddProfile'>
               <ButtonOne>Join Project</ButtonOne>
+              </Link>
             </div>
             </section>
             </Media.Body>

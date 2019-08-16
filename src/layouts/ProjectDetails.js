@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { GenreForm, OtherRoleForm, TagForm, PrjImageForm, DetailsForm } from './components/Forms'
-import { ButtonOne } from './components/Button'
+import { GenreForm, OtherRoleForm, TagForm, PrjImageForm, DetailsForm } from '../components/Forms'
+import { ButtonOne } from '../components/Button'
 
 class ProjectDetails extends Component {
   render() {
