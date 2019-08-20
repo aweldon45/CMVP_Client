@@ -11,6 +11,33 @@ import { Navigationbar } from './components/Navigationbar'
 
 class App extends Component {
 
+state = {
+  projects: [
+    {
+      id: 1,
+      title: 'my first film',
+      director: 'tony weldon',
+      tags: 'inspiring',
+      writer: 'holly weldon'
+    },
+    {
+      id: 2,
+      title: 'my second film',
+      director: 'holly weldon',
+      tags: 'scarry hours',
+      writer: 'jeff weldon'
+    },
+    {
+      id: 3,
+      title: 'my third film',
+      director: 'aubrey chamberlain',
+      tags: 'inspiring',
+      writer: 'jeanette weldon'
+    }
+  ]
+}
+
+
   render() {
     return (
       <React.Fragment>
@@ -20,7 +47,7 @@ class App extends Component {
               <Route exact path="/" component = {Home} />
             <Layout>
               <Route path="/AddProject" component = {AddProject} />
-              <Route path="/Search" component = {Search} />
+              <Route path="/Search" render = {(props) => <Search {...props} projects={this.state.projects} />} />
               <Route path="/ProjectDetails" component = {ProjectDetails} />
               <Route path="/AddProfile" component = {AddProfile} />
             </Layout>

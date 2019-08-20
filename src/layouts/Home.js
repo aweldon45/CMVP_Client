@@ -3,8 +3,8 @@ import { Container, Media } from 'react-bootstrap';
 import lpImage from '../assets/backlit-clouds-friends.jpg';
 import styled from 'styled-components';
 import { ButtonOne } from '../components/Button';
+// eslint-disable-next-line
 import { BrowserRouter as Route, Link } from 'react-router-dom';
-//import AddProject from './AddProject';
 
 // layout style
 const Styles = styled.div`
