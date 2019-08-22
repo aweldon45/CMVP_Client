@@ -15,21 +15,21 @@ state = {
   projects: [
     {
       id: 1,
-      title: 'my first film',
+      title: 'Mr. Bojangles',
       director: 'tony weldon',
       tags: 'inspiring',
       writer: 'holly weldon'
     },
     {
       id: 2,
-      title: 'my second film',
+      title: 'how the west was won',
       director: 'holly weldon',
       tags: 'scarry hours',
       writer: 'jeff weldon'
     },
     {
       id: 3,
-      title: 'my third film',
+      title: 'dont talk about me',
       director: 'aubrey chamberlain',
       tags: 'inspiring',
       writer: 'jeanette weldon'
