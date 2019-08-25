@@ -6,7 +6,8 @@ import Search from './layouts/Search';
 import ProjectDetails from './layouts/ProjectDetails';
 import AddProfile from './layouts/AddProfile'
 import { Layout }  from './components/Layout';
-import { Navigationbar } from './components/Navigationbar'
+import { Navigationbar } from './components/Navigationbar';
+import Playback from './layouts/Playback'
 
 
 class App extends Component {
@@ -50,6 +51,7 @@ state = {
               <Route path="/Search" render = {(props) => <Search {...props} projects={this.state.projects} />} />
               <Route path="/ProjectDetails" component = {ProjectDetails} />
               <Route path="/AddProfile" component = {AddProfile} />
+              <Route path="/Playback" component = {Playback} />
             </Layout>
           </Switch>
         </Router>
