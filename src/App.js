@@ -45,14 +45,14 @@ state = {
       <Navigationbar/>
         <Router>
           <Switch>
-              <Route exact path="/" component = {Home} />
-            <Layout>
-              <Route path="/AddProject" component = {AddProject} />
-              <Route path="/Search" render = {(props) => <Search {...props} projects={this.state.projects} />} />
-              <Route path="/ProjectDetails" component = {ProjectDetails} />
-              <Route path="/AddProfile" component = {AddProfile} />
-              <Route path="/Playback" component = {Playback} />
-            </Layout>
+                <Route exact path="/" component = {Home} />
+                <Route path="/Playback" component = {Playback} />
+              <Layout>
+                <Route path="/AddProject" component = {AddProject} />
+                <Route path="/Search" render = {(props) => <Search {...props} projects={this.state.projects} />} />
+                <Route path="/ProjectDetails" component = {ProjectDetails} />
+                <Route path="/AddProfile" component = {AddProfile} />
+              </Layout>
           </Switch>
         </Router>
       </React.Fragment>
