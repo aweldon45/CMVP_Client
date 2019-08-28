@@ -7,7 +7,8 @@ import ProjectDetails from './layouts/ProjectDetails';
 import AddProfile from './layouts/AddProfile'
 import { Layout }  from './components/Layout';
 import { Navigationbar } from './components/Navigationbar';
-import Playback from './layouts/Playback'
+import Playback from './layouts/Playback';
+import Profile from './layouts/Profile'
 
 
 class App extends Component {
@@ -52,6 +53,7 @@ state = {
                 <Route path="/Search" render = {(props) => <Search {...props} projects={this.state.projects} />} />
                 <Route path="/ProjectDetails" component = {ProjectDetails} />
                 <Route path="/AddProfile" component = {AddProfile} />
+                <Route path="/Profile" component = {Profile} />
               </Layout>
           </Switch>
         </Router>

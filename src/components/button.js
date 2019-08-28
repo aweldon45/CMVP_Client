@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Styles = styled.div`
 
-.btn {
+#buttonOne {
   background-color: #176FFF;
   margin: 0px;
   border: 2px solid white;
@@ -12,12 +12,24 @@ const Styles = styled.div`
 
 }
 
+#buttonTwo {
+  background-color: #176FFF;
+  margin-top: 10px;
+}
+
 `
 
 
 export const ButtonOne = (props) => (
   <Styles>
-    <Button size='lg'>{props.children}</Button>
+    <Button id='buttonOne' size='lg'>{props.children}</Button>
+  </Styles>
+
+)
+
+export const ButtonTwo = (props) => (
+  <Styles>
+    <Button id='buttonTwo' size='md'>{props.children}</Button>
   </Styles>
 
 )
