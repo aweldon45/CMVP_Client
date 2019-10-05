@@ -160,7 +160,7 @@ export const PasswordForm = (props) => (
 // confirm password
 export const CnfPasswordForm = (props) => (
   <Form>
-    <Form.Group controlId='formBasicPassword'>
+    <Form.Group controlId='formBasicCnfPassword'>
       <Form.Label>Confirm Password</Form.Label>
       <Form.Control type='password' placeholder='Password' />
       <Form.Text></Form.Text>
