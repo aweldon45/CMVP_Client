@@ -16,8 +16,19 @@ class AddProfile extends Component {
   }
 
   updateProfile(event) {
-    this.setState({userName1: event.target.value});
-    console.log(this.state.userName1)
+    this.setState({
+      userName1: event.target.value
+    });
+  }
+
+  updateEmail(event) {
+    this.setState({
+      email1: event.target.value
+    });
+  }
+
+  callProfile(item) {
+    console.log(item)
   }
 
 
@@ -34,12 +45,12 @@ class AddProfile extends Component {
         </Form.Group>
       </Form>
       <UsernameForm></UsernameForm>
-      <EmailForm></EmailForm>
+      <EmailForm value={this.state.email1} onChange={this.updateEmail.bind(this)}></EmailForm>
       <PasswordForm></PasswordForm>
       <CnfPasswordForm></CnfPasswordForm>
       <ProfileImageForm></ProfileImageForm>
       <br></br>
-      <ButtonOne>Submit</ButtonOne>
+      <ButtonOne function={()=>{this.callProfile(this.state)}}>Submit</ButtonOne>
       </div>
     )
   }

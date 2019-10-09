@@ -22,7 +22,7 @@ const Styles = styled.div`
 
 export const ButtonOne = (props) => (
   <Styles>
-    <Button id='buttonOne' size='lg'>{props.children}</Button>
+    <Button id='buttonOne' size='lg' onClick={props.function}>{props.children}</Button>
   </Styles>
 
 )

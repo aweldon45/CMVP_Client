@@ -140,7 +140,7 @@ export const EmailForm = (props) => (
   <Form>
     <Form.Group controlId='formBasicEmail'>
       <Form.Label>Email</Form.Label>
-      <Form.Control type='email' placeholder='Email address' />
+      <Form.Control type='email' placeholder='Email address' value={props.value} onChange={props.onChange}/>
       <Form.Text></Form.Text>
     </Form.Group>
   </Form>
