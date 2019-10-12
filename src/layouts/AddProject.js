@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NameForm, LinkForm, RoleForm, LocationForm } from '../components/Forms'
+import { NameForm, LinkForm, RoleForm } from '../components/Forms'
 import { ButtonOne } from '../components/Button'
 
 class AddProject extends Component {
@@ -10,7 +10,6 @@ class AddProject extends Component {
       <NameForm></NameForm>
       <LinkForm></LinkForm>
       <RoleForm></RoleForm>
-      <LocationForm></LocationForm>
       <br></br>
       <ButtonOne>Submit</ButtonOne>
       </div>

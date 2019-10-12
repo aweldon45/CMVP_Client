@@ -25,11 +25,11 @@ export const LinkForm = () => (
 )
 
 //username
-export const UsernameForm = () => (
+export const UsernameForm = (props) => (
   <Form>
     <Form.Group controlId='formBasicUsername'>
       <Form.Label>Username</Form.Label>
-      <Form.Control type='name' placeholder='Username' />
+      <Form.Control type='name' placeholder='Username' value={props.value} onChange={props.onChange}/>
       <Form.Text></Form.Text>
     </Form.Group>
   </Form>
@@ -51,11 +51,11 @@ export const RoleForm = () => (
 )
 
 //location
-export const LocationForm = () => (
+export const LocationForm = (props) => (
   <Form>
     <Form.Group controlId='controlSelect1'>
       <Form.Label>Location</Form.Label>
-      <Form.Control as='select'>
+      <Form.Control as='select'  value={props.value} onChange={props.onChange}>
         <option>Location 1</option>
         <option>Location 2</option>
         <option>Location 3</option>
@@ -151,7 +151,7 @@ export const PasswordForm = (props) => (
   <Form>
     <Form.Group controlId='formBasicPassword'>
       <Form.Label>Password</Form.Label>
-      <Form.Control type='password' placeholder='Password' />
+      <Form.Control type='password' placeholder='Password' value={props.value} onChange={props.onChange}/>
       <Form.Text></Form.Text>
     </Form.Group>
   </Form>
@@ -162,18 +162,18 @@ export const CnfPasswordForm = (props) => (
   <Form>
     <Form.Group controlId='formBasicCnfPassword'>
       <Form.Label>Confirm Password</Form.Label>
-      <Form.Control type='password' placeholder='Password' />
+      <Form.Control type='password' placeholder='Password' value={props.value} onChange={props.onChange}/>
       <Form.Text></Form.Text>
     </Form.Group>
   </Form>
 )
 
 //profile Image
-export const ProfileImageForm = () => (
+export const ProfileImageForm = (props) => (
   <Form>
     <Form.Group controlId='formBasicLink'>
       <Form.Label>Profile Image</Form.Label>
-      <Form.Control type='link' placeholder='Include a Profile Image' />
+      <Form.Control type='link' placeholder='Include a Profile Image' value={props.value} onChange={props.onChange}/>
       <Form.Text></Form.Text>
     </Form.Group>
   </Form>
