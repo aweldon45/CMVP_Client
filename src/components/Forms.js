@@ -3,22 +3,22 @@ import { Form } from 'react-bootstrap';
 
 //Add a project
 //name
-export const NameForm = () => (
+export const NameForm = (props) => (
   <Form>
     <Form.Group controlId='formBasicName'>
       <Form.Label>Title</Form.Label>
-      <Form.Control type='name' placeholder='Project Title' />
+      <Form.Control type='name' placeholder='Project Title' value={props.value} onChange={props.onChange}/>
       <Form.Text></Form.Text>
     </Form.Group>
   </Form>
 )
 
 //link
-export const LinkForm = () => (
+export const LinkForm = (props) => (
   <Form>
     <Form.Group controlId='formBasicLink'>
       <Form.Label>Vimeo Link</Form.Label>
-      <Form.Control type='link' placeholder='Vimeo link to your Project' />
+      <Form.Control type='link' placeholder='Vimeo link to your Project' value={props.value} onChange={props.onChange}/>
       <Form.Text></Form.Text>
     </Form.Group>
   </Form>
@@ -36,11 +36,11 @@ export const UsernameForm = (props) => (
 )
 
 //Role
-export const RoleForm = () => (
+export const RoleForm = (props) => (
   <Form>
     <Form.Group controlId='controlSelect1'>
       <Form.Label>What was your primary role on this project?</Form.Label>
-      <Form.Control as='select'>
+      <Form.Control as='select'value={props.value} onChange={props.onChange}>
         <option>Role 1</option>
         <option>Role 2</option>
         <option>Role 3</option>
@@ -68,11 +68,11 @@ export const LocationForm = (props) => (
 
 //Project Details - Main
 // genre
-export const GenreForm = () => (
+export const GenreForm = (props) => (
   <Form>
     <Form.Group controlId='controlSelect1'>
       <Form.Label>Genre</Form.Label>
-      <Form.Control as='select'>
+      <Form.Control as='select' value={props.value} onChange={props.onChange}>
         <option>Genre 1</option>
         <option>Genre 2</option>
         <option>Genre 3</option>
@@ -98,11 +98,11 @@ export const OtherRoleForm = () => (
 )
 
 //Tag Form
-export const TagForm = () => (
+export const TagForm = (props) => (
   <Form>
     <Form.Group controlId='controlSelect1'>
       <Form.Label>Tag this Project</Form.Label>
-      <Form.Control as='select'>
+      <Form.Control as='select' value={props.value} onChange={props.onChange}>
         <option>Tag 1</option>
         <option>Tag 2</option>
         <option>Tag 3</option>
@@ -113,22 +113,22 @@ export const TagForm = () => (
 )
 
 //project Image
-export const PrjImageForm = () => (
+export const PrjImageForm = (props) => (
   <Form>
     <Form.Group controlId='formBasicLink'>
       <Form.Label>Project Image</Form.Label>
-      <Form.Control type='link' placeholder='Include an image to represent your Project' />
+      <Form.Control type='link' placeholder='Include an image to represent your Project' value={props.value} onChange={props.onChange} />
       <Form.Text></Form.Text>
     </Form.Group>
   </Form>
 )
 
 //other project details
-export const DetailsForm = () => (
+export const DetailsForm = (props) => (
   <Form>
     <Form.Group controlId='controlTextArea1'>
       <Form.Label>Anything else you want to say about this project?</Form.Label>
-      <Form.Control as='textarea' rows='3' />
+      <Form.Control as='textarea' rows='3' value={props.value} onChange={props.onChange} />
       <Form.Text></Form.Text>
     </Form.Group>
   </Form>

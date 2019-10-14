@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { EmailForm, PasswordForm, CnfPasswordForm, ProfileImageForm, UsernameForm, LocationForm } from '../components/Forms';
 import { ButtonOne } from '../components/Button';
 import axios from 'axios';
-
+import { Redirect } from 'react-router-dom';
 
 class AddProfile extends Component {
   constructor() {
@@ -53,8 +53,9 @@ class AddProfile extends Component {
     });
   }
 
+//Functions
 //add a user
-  callProfile(item) {
+  handleOnClick(item) {
     axios.put('http://localhost:8082/newuser', {
       username: item.userName1,
       password: item.password1,
@@ -62,12 +63,20 @@ class AddProfile extends Component {
       image: item.profileImage1,
       location: item.location1
     }).then((response)=> {
+      if (response.data.includes('Collabeteria!')) {
+          this.setState({redirect: true})
+        }
       console.log(response);
     }).catch((error)=> {
       console.log(error)
     })
   }
 
+  renderRedirect() {
+    if (this.state.redirect) {
+      return <Redirect push to='/Search'/>
+    }
+  }
 
 
   render() {
@@ -81,7 +90,8 @@ class AddProfile extends Component {
       <ProfileImageForm value={this.state.profileImage1} onChange={this.updateProfileImg.bind(this)}></ProfileImageForm>
       <LocationForm value={this.state.location1} onChange={this.updateLocation.bind(this)}></LocationForm>
       <br></br>
-      <ButtonOne function={()=>{this.callProfile(this.state)}}>Submit</ButtonOne>
+      {this.renderRedirect()}
+      <ButtonOne function={()=>{this.handleOnClick(this.state)}}>Submit</ButtonOne>
       </div>
     )
   }
