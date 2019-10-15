@@ -8,36 +8,38 @@ import AddProfile from './layouts/AddProfile'
 import { Layout }  from './components/Layout';
 import { Navigationbar } from './components/Navigationbar';
 import Playback from './layouts/Playback';
-import Profile from './layouts/Profile'
-
+import Profile from './layouts/Profile';
+import axios from 'axios';
 
 class App extends Component {
 
 state = {
-  projects: [
-    {
-      id: 1,
-      title: 'Mr. Bojangles',
-      director: 'tony weldon',
-      tags: 'inspiring',
-      writer: 'holly weldon'
-    },
-    {
-      id: 2,
-      title: 'how the west was won',
-      director: 'holly weldon',
-      tags: 'scarry hours',
-      writer: 'jeff weldon'
-    },
-    {
-      id: 3,
-      title: 'dont talk about me',
-      director: 'aubrey chamberlain',
-      tags: 'inspiring',
-      writer: 'jeanette weldon'
+  projects: [{
+    title: 'Book Chef',
+    role: 'director',
+    name: 'Jeff Weldon',
+    email: 'jeff@gmail.com'
+  }, {
+    title: ' Gardener',
+    role: 'director',
+    name: 'Aubrey C',
+    email: 'aubrey@gmail.com'
     }
   ]
 }
+
+  callState() {
+    axios.get('http://localhost:8082/allUsers')
+    .then((response)=>{
+      let barray = [];
+      for (let i=0; i<response.data.length;i++) {
+        barray.push(response.data[i][0])
+      }
+      this.setState({projects: barray})
+    }).catch((error)=> {
+      console.log(error)
+    })
+  }
 
 
   render() {
@@ -50,7 +52,7 @@ state = {
                 <Route path="/Playback" component = {Playback} />
               <Layout>
                 <Route path="/AddProject" component = {AddProject} />
-                <Route path="/Search" render = {(props) => <Search {...props} projects={this.state.projects} />} />
+                <Route path="/Search" render = {(props) => <Search {...props} projects={this.state.projects} callState={()=>this.callState()}/>} />
                 <Route path="/ProjectDetails" component = {ProjectDetails} />
                 <Route path="/AddProfile" component = {AddProfile} />
                 <Route path="/Profile" component = {Profile} />

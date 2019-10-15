@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { SearchCard } from '../components/SearchCard';
-import { Form } from 'react-bootstrap'
+import { Form } from 'react-bootstrap';
+
 
 class Search extends Component {
   constructor () {
@@ -10,18 +11,23 @@ class Search extends Component {
     }
   }
 
+  componentDidMount() {
+        this.props.callState()
+    }
+
   updatefilter(event) {
     this.setState({filter1: event.target.value})
   }
 
-  render() {
-      const filteredRoles = this.props.projects.filter((project) => {
-        return project.director.toLowerCase().indexOf(this.state.filter1.toLowerCase()) !== -1;
-      })
 
-    const results = filteredRoles.map((project) => (
-    <SearchCard title={project.title} role={project.director} key={project.id}>
-      </SearchCard>))
+  render() {
+    const filteredRoles = this.props.projects.filter((project) => {
+      return project.role.toLowerCase().indexOf(this.state.filter1.toLowerCase()) !== -1
+    })
+
+    const results = filteredRoles.map((project, index) => (
+      <SearchCard title={project.title} name={project.name} role={project.role} key={index}>
+        </SearchCard>))
 
       return (
         <div>

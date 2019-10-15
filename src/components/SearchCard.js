@@ -18,6 +18,7 @@ export const SearchCard = (props) => (
     <Card id='cardShell'>
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
+        <Card.Text>{props.name}</Card.Text>
         <Card.Text>{props.role}</Card.Text>
       </Card.Body>
     </Card>
