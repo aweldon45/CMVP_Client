@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import styled from 'styled-components';
+// eslint-disable-next-line
+import { BrowserRouter as Route, Link } from 'react-router-dom';
 
 const Styles = styled.div`
 
@@ -12,12 +14,16 @@ const Styles = styled.div`
 
 `
 
-
+//check
 export const SearchCard = (props) => (
   <Styles>
     <Card id='cardShell'>
       <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
+        <Card.Title>
+            <Link to='/Playback'>
+          {props.title}
+            </Link>
+        </Card.Title>
         <Card.Text>{props.name}</Card.Text>
         <Card.Text>{props.role}</Card.Text>
       </Card.Body>
