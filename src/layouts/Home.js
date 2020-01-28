@@ -64,7 +64,7 @@ class Home extends Component {
             <div>
               <h1>Collabeteria.</h1>
               <p id='tagFalse'>Bacterial infection</p>
-              <p id='tagFalse'>Planet in a fictional universe</p>
+              <p id='tagFalse'>Planet in fictional universe</p>
               <p id='tagTrue'>A video-first networking tool for filmmakers</p>
             </div>
             <section id='wrapper'>
